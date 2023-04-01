@@ -1,0 +1,24 @@
+button {
+    appearance: none;
+    border: none;
+
+    position: relative;
+    min-height: 2.5rem;
+    min-width: 2.5rem;
+
+    background-color: #a6a6a6;
+    color: #ffffff;
+    font-size: 1.5rem;
+
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out, translate 50ms ease-in-out;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(187, 208, 4);
+}
+
+button:active {
+    translate: 0 2px;
+}

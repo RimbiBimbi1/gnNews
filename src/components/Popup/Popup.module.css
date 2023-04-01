@@ -1,0 +1,95 @@
+.popupContainer {
+    position: relative;
+    z-index: 1000;
+    width: 0;
+    height: 0;
+}
+
+.overlay {
+    position: fixed;
+    display: flex;
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+
+    overflow-y: scroll;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: opacity 200ms ease-in-out;
+}
+
+.popup {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+    top: 5%;
+
+    margin: 5%;
+    width: 85%;
+    overflow: hidden;
+
+    background-color: white;
+    border-radius: 10px;
+    pointer-events: unset;
+}
+
+.closed {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeButton {
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    border-radius: 50%;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.closeButton:hover {
+    background-color: rgba(213, 235, 4, 0.47);
+}
+
+.closeButton::after {
+    display: flex;
+
+    height: 100%;
+
+    content: '×';
+    font-size: 2.5rem;
+    line-height: 2.7rem;
+
+    align-self: center;
+
+    color: #343c44;
+}
+
+@media only screen and (max-width: 600px) and (max-device-aspect-ratio: 3/2) {
+    .popup {
+        top: 5%;
+        width: 90%;
+    }
+    .overlay {
+    }
+}

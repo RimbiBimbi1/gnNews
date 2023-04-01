@@ -1,0 +1,87 @@
+.newsTile {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+
+    background-color: #343c44;
+    cursor: pointer;
+}
+
+.imageContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    object-fit: cover;
+    height: 100%;
+    opacity: 0.9;
+    transition: scale 200ms ease-in-out, opacity 200ms ease-in-out;
+}
+
+.newsTile:hover .image {
+    scale: 1.05;
+    opacity: 1;
+}
+
+.overlay {
+    display: flex;
+    position: absolute;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    bottom: 0;
+
+    padding: 0.5rem;
+    max-height: 4rem;
+    width: 100%;
+
+    line-height: 1.5rem;
+    text-align: left;
+    overflow: hidden;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+
+    transition: max-height 300ms ease-in-out;
+}
+
+.newsTile:hover .overlay {
+    max-height: 100%;
+}
+
+.newsTile::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    transition: border-bottom-color 200ms ease-in-out;
+}
+
+.newsTile:hover::after {
+    border-bottom-color: #d5eb04;
+}
+
+.titleBox {
+    flex-basis: 2fr;
+}
+
+.sourceBox,
+.dateBox {
+    flex-basis: 1fr;
+
+    font-size: 0.9rem;
+    color: #fbffdb;
+}
