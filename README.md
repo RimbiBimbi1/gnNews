@@ -1,3 +1,3 @@
 # gnNews
 
-This project was made as part of recrutation process.
+This project was made for recruitment process.
