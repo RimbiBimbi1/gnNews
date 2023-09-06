@@ -1,4 +1,4 @@
-const API_KEY = '';
+const API_KEY = '015ea21a821449369e31efe297001f78';
 
 const DOMAIN = 'https://newsapi.org';
 export const ENDPOINTS = {
@@ -8,8 +8,6 @@ export const ENDPOINTS = {
 };
 
 export const getNewsApiUrl = (endpoint, { params }, apiKey = API_KEY) => {
-    if (API_KEY === '') console.log('Put your api key in gnNews/src/api/newsApi.js');
-
     //get parameter keys
     const paramKeys = Object.keys(params);
     //convert params object to an array of uri compatible param strings
